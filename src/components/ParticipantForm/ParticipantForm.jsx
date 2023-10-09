@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 export default function ParticipantForm ({user, handleAddParticipant}) {
     const [newParticipant, setNewParticipant] = useState({
         name: '',
