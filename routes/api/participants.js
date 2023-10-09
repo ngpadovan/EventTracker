@@ -6,3 +6,4 @@ router.post('/', participantsCtrl.create);
 
 router.get('/', participantsCtrl.index);
 
+module.exports = router;

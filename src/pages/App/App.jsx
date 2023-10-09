@@ -19,7 +19,7 @@ export default function App() {
             <Routes>
               {/* Route components in here */}
               <Route path="/participants" element={<ParticipantsListPage user = {user}/>}/>
-              <Route path="/*" element={<Navigate to="/notes" />} />
+              <Route path="/*" element={<Navigate to="/participants" />} />
               <Route path="/orders/new" element={<NewOrderPage />} />
               <Route path="/orders" element={<OrderHistoryPage />} />
             </Routes>

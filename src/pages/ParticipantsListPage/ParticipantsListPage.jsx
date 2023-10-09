@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ParticipantForm from '../../components/ParticipantForm/ParticipantForm';
 import * as participantsAPI from "../../utilities/participants-api";
+import Participant from "../../components/Participant/Participant";
 
 export default function ParticipantsListPage({ user }) {
   
@@ -15,12 +16,14 @@ useEffect(function() {
   }, [])
   
   
-    const participantsList = participants.map((participant, index) => (
-    <div key={index}>
-      <p>Name: {participant.name}</p>
-      <p>Email: {participant.email}</p>
-    </div>
+  const participantsList = participants.map((participant, index) => (
+    <Participant key={index} participant={participant} />
   ));
+
+  async function handleAddParticipant(newParticipantData) {
+    const newParticipant = await participantsAPI.addParticipant(newParticipantData);
+    setParticipants([...participants, newParticipant]);
+  }
 
   return (
     <div className="ParticipantsListPage">
