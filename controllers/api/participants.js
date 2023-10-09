@@ -2,7 +2,8 @@ const Participant = require('../../models/participant');
 
 module.exports = {
     create,
-    index
+    index,
+    delete: deleteParticipant
 }
 
 async function create(req,res) {
@@ -13,4 +14,12 @@ async function create(req,res) {
   async function index(req,res) {
     const participants = await Participant.find({user: req.user._id});
     res.json(participants);
+  }
+
+  async function deleteParticipant(req, res) {
+    const participant = await Participant.findOneAndDelete({
+      "_id": req.params.id,
+    });
+  
+    res.json(participant);
   }

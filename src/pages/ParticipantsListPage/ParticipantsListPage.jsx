@@ -17,13 +17,19 @@ useEffect(function() {
   
   
   const participantsList = participants.map((participant, index) => (
-    <Participant key={index} participant={participant} />
+    <Participant key={index} participant={participant} handleDelete = {handleDelete} />
   ));
 
   async function handleAddParticipant(newParticipantData) {
     const newParticipant = await participantsAPI.addParticipant(newParticipantData);
     setParticipants([...participants, newParticipant]);
   }
+
+  async function handleDelete(participantId) {
+    const deletedParticipant = await participantsAPI.deleteParticipant(participantId);
+    setParticipants(participants.filter(participant => participant._id !== participantId));
+  }
+  
 
   return (
     <div className="ParticipantsListPage">

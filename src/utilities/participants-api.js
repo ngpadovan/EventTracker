@@ -8,3 +8,7 @@ export function addParticipant(participantData) {
 export function getAll() {
     return sendRequest(BASE_URL);
   }
+
+  export function deleteParticipant(id) {
+    return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
+  }
