@@ -1,0 +1,47 @@
+.EventForm {
+  width: 300px; /* Adjust the width as needed */
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.EventForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.EventForm label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.EventForm input[type="text"],
+.EventForm select,
+.EventForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.EventForm input[type="checkbox"] {
+  margin-left: 5px;
+}
+
+.EventForm button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.EventForm button:hover {
+  background-color: #0056b3;
+}

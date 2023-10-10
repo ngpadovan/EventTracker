@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './EventForm.css';
 
 export default function EventForm({ user, handleAddEvent }) {
   const [newEvent, setNewEvent] = useState({
@@ -53,7 +54,11 @@ export default function EventForm({ user, handleAddEvent }) {
             value={newEvent.category}
             onChange={handleChange}
           >
-            {/* Options for categories */}
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Health and Fitness">Health and Fitness</option>
+            <option value="Special Occasions">Special Occasions</option>
           </select>
         </label>
         <label>
