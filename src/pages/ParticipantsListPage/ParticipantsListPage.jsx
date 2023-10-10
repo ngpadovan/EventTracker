@@ -9,8 +9,8 @@ const [participants, setParticipants] = useState([]);
 
 useEffect(function() {
     async function getParticipants() {
-      const notes = await participantsAPI.getAll();
-      setParticipants(notes);
+      const participants = await participantsAPI.getAll();
+      setParticipants(participants);
     }
     getParticipants();
   }, [])

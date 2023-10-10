@@ -23,17 +23,20 @@ export default function EventForm({ user, handleAddEvent }) {
 
   function handleSubmit(evt) {
     evt.preventDefault();
-    handleAddEvent(newEvent);
+    const newEventData = { ...newEvent, user: user };
+    handleAddEvent(newEventData);
     setNewEvent({
       eventName: '',
       category: '',
       location: '',
       dateTime: '',
-      participants: '',
+      participants: [],
       recurringWeekly: false,
       details: '',
     });
   }
+
+  
 
   return (
     <div className="EventForm">

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const validEventCategories = require('./eventCategories');
+const validEventCategories = require('./category');
 
 const eventSchema = new Schema({
     eventName: {
@@ -19,12 +19,7 @@ const eventSchema = new Schema({
         type: Date,
         required: true,
       },
-      participants: [
-        {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: 'Participant',
-        },
-      ],
+      participants: [String],
       recurringWeekly: {
         type: Boolean,
         default: false,
