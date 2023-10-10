@@ -1,17 +1,23 @@
-
-
 export default function Event({ event, handleDelete }) {
 
-    function handleDeleteClick(evt) {
-        evt.preventDefault();
-        handleDelete(event._id);
-      }
+  const formattedDate = new Date(event.dateTime).toLocaleString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true,
+  });
 
-    return (
-      <div className="Event">
-        <p>Title: {event.eventName}</p>
-        <p>Date: {event.dateTime}</p>
-        <button onClick={handleDeleteClick}>Delete</button>
-      </div>
-    );
+  function handleDeleteClick(evt) {
+    evt.preventDefault();
+    handleDelete(event._id);
   }
+
+  return (
+    <div className="Event">
+      <p>Title: {event.eventName}</p>
+      <p>Date: {formattedDate}</p>
+      <button onClick={handleDeleteClick}>Delete</button>
+    </div>
+  );
+}

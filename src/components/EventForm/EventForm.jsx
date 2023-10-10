@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import './EventForm.css';
 
+
 export default function EventForm({ user, handleAddEvent }) {
   const [newEvent, setNewEvent] = useState({
     eventName: '',
     category: '',
     location: '',
     dateTime: '',
-    participants: '',
+    participants: [],
     recurringWeekly: false,
     details: '',
   });
@@ -30,7 +31,7 @@ export default function EventForm({ user, handleAddEvent }) {
       category: '',
       location: '',
       dateTime: '',
-      participants: [],
+      participants: [''],
       recurringWeekly: false,
       details: '',
     });
