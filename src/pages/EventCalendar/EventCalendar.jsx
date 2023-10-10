@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import EventForm from '../../components/EventForm/EventForm';
 import * as eventsAPI from '../../utilities/events-api';
-import Event from '../../components/Event/Event';
+import Calendar from '../../components/Calendar/Calendar'; // Import your Calendar component
+import './EventCalendar.css';
 
 export default function EventCalendar({ user }) {
   const [events, setEvents] = useState([]);
@@ -14,9 +15,12 @@ export default function EventCalendar({ user }) {
     getEvents();
   }, []);
 
-  const eventsList = events.map((event, index) => (
-    <Event key={index} event={event} handleDelete = {handleDelete}/>
-  ));
+  const eventsList = events.map((event, index) => ({
+    id: event._id,
+    title: event.eventName,
+    start: new Date(event.dateTime),
+    end: new Date(event.dateTime), // You can adjust this as needed
+  }));
 
   async function handleAddEvent(newEventData) {
     const newEvent = await eventsAPI.addEvent(newEventData);
@@ -28,10 +32,13 @@ export default function EventCalendar({ user }) {
   }
 
   return (
-    <div className="EventsListPage">
-      <EventForm user={user} handleAddEvent={handleAddEvent} />
-      <h1>Events</h1>
-      {!events.length ? <p>No Events Yet</p> : eventsList}
+    <div className="EventCalendar">
+      <div className="EventForm-container">
+        <EventForm user={user} handleAddEvent={handleAddEvent} />
+      </div>
+      <div className="Calendar-container">
+        <Calendar events={eventsList} />
+      </div>
     </div>
   );
 }

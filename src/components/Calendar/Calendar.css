@@ -1,0 +1,57 @@
+.EventCalendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .EventForm {
+    margin-bottom: 20px;
+  }
+  
+  .Calendar-container {
+    width: 800px;
+    margin: 0 auto;
+  }
+  
+  .rbc-calendar {
+    width: 100%;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+  }
+  
+  .rbc-month-view {
+    display: block;
+  }
+  
+  .rbc-month-row {
+    display: flex;
+  }
+  
+  .rbc-header {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    background-color: #007acc;
+    color: white;
+  }
+  
+  .rbc-row-content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .rbc-event {
+    background-color: #007acc;
+    color: white;
+    border-radius: 4px;
+    padding: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0 4px 4px 0;
+  }
+  
+  .rbc-event:hover {
+    background-color: #005fb1;
+  }
