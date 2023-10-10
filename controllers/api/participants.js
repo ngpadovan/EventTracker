@@ -11,15 +11,15 @@ async function create(req,res) {
     res.json(participant);
   }
 
-  async function index(req,res) {
-    const participants = await Participant.find({user: req.user._id});
-    res.json(participants);
-  }
+async function index(req,res) {
+  const participants = await Participant.find({user: req.user._id});
+  res.json(participants);
+}
 
-  async function deleteParticipant(req, res) {
-    const participant = await Participant.findOneAndDelete({
-      "_id": req.params.id,
-    });
+async function deleteParticipant(req, res) {
+  const participant = await Participant.findOneAndDelete({
+    "_id": req.params.id,
+  });
   
-    res.json(participant);
-  }
+  res.json(participant);
+}

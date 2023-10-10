@@ -15,12 +15,16 @@ export default function EventCalendar({ user }) {
   }, []);
 
   const eventsList = events.map((event, index) => (
-    <Event key={index} event={event} />
+    <Event key={index} event={event} handleDelete = {handleDelete}/>
   ));
 
   async function handleAddEvent(newEventData) {
     const newEvent = await eventsAPI.addEvent(newEventData);
     setEvents([...events, newEvent]);
+  }
+
+  async function handleDelete(eventId) {
+    setEvents(events.filter(event => event._id !== eventId));
   }
 
   return (

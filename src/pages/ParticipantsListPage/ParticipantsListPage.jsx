@@ -26,7 +26,6 @@ useEffect(function() {
   }
 
   async function handleDelete(participantId) {
-    const deletedParticipant = await participantsAPI.deleteParticipant(participantId);
     setParticipants(participants.filter(participant => participant._id !== participantId));
   }
   

@@ -6,6 +6,6 @@ router.post('/', eventsCtrl.create);
 
 router.get('/', eventsCtrl.index);
 
-// router.delete('/:id', eventsCtrl.delete);
+router.delete('/events/:id', eventsCtrl.delete);
 
 module.exports = router;

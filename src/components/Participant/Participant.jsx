@@ -1,4 +1,4 @@
-import * as participantsAPI from "../../utilities/participants-api";
+
 
 export default function Participant({ participant, handleDelete }) {
     function handleDeleteClick(evt) {
