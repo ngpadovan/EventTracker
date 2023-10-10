@@ -9,7 +9,7 @@ const eventSchema = new Schema({
       },
       category: {
         type: String,
-        enum: validEventCategories, // Use the array of valid categories as enum
+        enum: validEventCategories, 
         required: true,
       },
       location: {
@@ -35,7 +35,8 @@ const eventSchema = new Schema({
       user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User', 
-        required: true, 
+        required: true,
+      },
     
     });
     

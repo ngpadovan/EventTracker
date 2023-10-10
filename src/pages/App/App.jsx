@@ -3,8 +3,8 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
+// import NewOrderPage from '../NewOrderPage/NewOrderPage';
+
 import NavBar from '../../components/NavBar/NavBar';
 import ParticipantsListPage from '../ParticipantsListPage/ParticipantsListPage'
 
@@ -20,8 +20,7 @@ export default function App() {
               {/* Route components in here */}
               <Route path="/participants" element={<ParticipantsListPage user = {user}/>}/>
               <Route path="/*" element={<Navigate to="/participants" />} />
-              <Route path="/orders/new" element={<NewOrderPage />} />
-              <Route path="/orders" element={<OrderHistoryPage />} />
+              {/* <Route path="/orders/new" element={<NewOrderPage />} /> */}
             </Routes>
           </>
           :
