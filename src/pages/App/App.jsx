@@ -4,7 +4,8 @@ import { getUser } from '../../utilities/users-service';
 import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
 // import NewOrderPage from '../NewOrderPage/NewOrderPage';
-
+import EventCalendar from '../EventCalendar/EventCalendar';
+import EventManager from '../EventManager/EventManager';
 import NavBar from '../../components/NavBar/NavBar';
 import ParticipantsListPage from '../ParticipantsListPage/ParticipantsListPage'
 
@@ -19,7 +20,9 @@ export default function App() {
             <Routes>
               {/* Route components in here */}
               <Route path="/participants" element={<ParticipantsListPage user = {user}/>}/>
-              <Route path="/*" element={<Navigate to="/participants" />} />
+              <Route path="/participants/*" element={<Navigate to="/participants" />} />
+              <Route path="/eventmanager" element={<EventManager user = {user}/>} />
+              <Route path="/" element={<EventCalendar user = {user}/>} />
               {/* <Route path="/orders/new" element={<NewOrderPage />} /> */}
             </Routes>
           </>
