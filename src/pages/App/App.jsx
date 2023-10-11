@@ -8,7 +8,7 @@ import EventCalendar from '../EventCalendar/EventCalendar';
 import EventManager from '../EventManager/EventManager';
 import NavBar from '../../components/NavBar/NavBar';
 import ParticipantsListPage from '../ParticipantsListPage/ParticipantsListPage'
-import EventDetailPage from '../EventDetailPage/EventDetailPage'
+import EventDetailPage from '../EventDetailPage/EventDetailPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());

@@ -22,7 +22,7 @@ async function index(req,res) {
       "_id": req.params.id,
     });
   
-  res.json(participant);
+  res.json(event);
 }
 
 async function show(req,res) {
