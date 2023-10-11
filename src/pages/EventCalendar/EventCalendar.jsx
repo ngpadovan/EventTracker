@@ -53,9 +53,9 @@ export default function EventCalendar({ user }) {
     setEvents([...events, newEvent]);
   }
 
-  async function handleDelete(eventId) {
-    setEvents(events.filter(event => event._id !== eventId));
-  }
+  // async function handleDelete(eventId) {
+  //   setEvents(events.filter(event => event._id !== eventId));
+  // }
 
   return (
     <div className="EventCalendar">

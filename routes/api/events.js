@@ -8,4 +8,6 @@ router.get('/', eventsCtrl.index);
 
 router.delete('/:id', eventsCtrl.delete);
 
+router.get('/events/:id', eventsCtrl.show);
+
 module.exports = router;

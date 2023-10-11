@@ -12,3 +12,7 @@ export function getAll() {
 export function deleteEvent(id) {
   return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
 }
+
+export function getEventById(id) {
+  return sendRequest(`${BASE_URL}/${id}`);
+}
