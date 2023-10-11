@@ -8,6 +8,7 @@ import EventCalendar from '../EventCalendar/EventCalendar';
 import EventManager from '../EventManager/EventManager';
 import NavBar from '../../components/NavBar/NavBar';
 import ParticipantsListPage from '../ParticipantsListPage/ParticipantsListPage'
+import EventDetailPage from '../EventDetailPage/EventDetailPage'
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -23,6 +24,7 @@ export default function App() {
               <Route path="/participants/*" element={<Navigate to="/participants" />} />
               <Route path="/eventmanager" element={<EventManager user = {user}/>} />
               <Route path="/" element={<EventCalendar user = {user}/>} />
+              <Route path="/events/:id" element={<EventDetailPage user = {user}/>} />
               {/* <Route path="/orders/new" element={<NewOrderPage />} /> */}
             </Routes>
           </>
