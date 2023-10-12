@@ -3,7 +3,6 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
-// import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import EventCalendar from '../EventCalendar/EventCalendar';
 import EventManager from '../EventManager/EventManager';
 import NavBar from '../../components/NavBar/NavBar';
@@ -25,7 +24,6 @@ export default function App() {
               <Route path="/eventmanager" element={<EventManager user = {user}/>} />
               <Route path="/" element={<EventCalendar user = {user}/>} />
               <Route path="/events/:id" element={<EventDetailPage user = {user}/>} />
-              {/* <Route path="/orders/new" element={<NewOrderPage />} /> */}
             </Routes>
           </>
           :

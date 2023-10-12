@@ -4,7 +4,9 @@ module.exports = {
     create,
     index,
     delete:deleteEvent,
-    show
+    show,
+    edit,
+    update
 }
 
 async function create(req, res) {
@@ -28,4 +30,16 @@ async function index(req,res) {
 async function show(req,res) {
   const event = await Event.findById(req.params.id);
   res.json(event);
+}
+
+async function edit(req,res) {
+  const event = await Event.findById(req.params.id);
+  res.jso(event);
+}
+
+async function update(req,res) {
+  const event = await Event.findById(req.params.id);
+  const newEvent = await event.updateOne(req.body);
+  const events = await Event.find({user: req.user._id});
+  res.json(events);
 }

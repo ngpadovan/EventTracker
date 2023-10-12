@@ -16,3 +16,7 @@ export function deleteEvent(id) {
 export function getEventById(id) {
   return sendRequest(`${BASE_URL}/${id}`);
 }
+
+export function update(id, updatedEvent) {
+  return sendRequest(`${BASE_URL}/${id}`, 'PUT', updatedEvent)
+}

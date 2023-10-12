@@ -4,6 +4,7 @@ import EventDetail from '../../components/EventDetail/EventDetail';
 import { useParams } from 'react-router-dom';
 
 
+
 export default function EventDetailPage ({ user }) {
 
     const [event, setEvent] = useState();
@@ -33,7 +34,7 @@ export default function EventDetailPage ({ user }) {
           {loading ? (
             <p>Loading...</p>
           ) : (
-            <EventDetail event={event} />
+            <EventDetail event={event} setEvent={setEvent}/>
           )}
         </div>
       );

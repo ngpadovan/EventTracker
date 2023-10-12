@@ -1,3 +1,4 @@
+
 export default function Event({ event, handleDelete }) {
 
   const formattedDate = new Date(event.dateTime).toLocaleString('en-US', {

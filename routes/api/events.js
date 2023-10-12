@@ -10,4 +10,8 @@ router.delete('/:id', eventsCtrl.delete);
 
 router.get('/:id', eventsCtrl.show);
 
+router.get('/:id/edit', eventsCtrl.edit);
+
+router.put('/:id', eventsCtrl.update);
+
 module.exports = router;

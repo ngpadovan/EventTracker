@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import EventForm from '../../components/EventForm/EventForm';
 import * as eventsAPI from '../../utilities/events-api';
-import Calendar from '../../components/Calendar/Calendar'; // Import your Calendar component
+import Calendar from '../../components/Calendar/Calendar';
 import './EventCalendar.css';
+import EventDetail from '../../components/EventDetail/EventDetail';
 
 export default function EventCalendar({ user }) {
   const [events, setEvents] = useState([]);

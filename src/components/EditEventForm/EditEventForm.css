@@ -1,0 +1,49 @@
+.EditEventForm {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .EditEventForm form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .EditEventForm label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .EditEventForm input[type="text"],
+  .EditEventForm select,
+  .EditEventForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .EditEventForm input[type="checkbox"] {
+    margin-left: 5px;
+  }
+  
+  .EditEventForm button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  .EditEventForm button:hover {
+    background-color: #0056b3;
+  }
+  
