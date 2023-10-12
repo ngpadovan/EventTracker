@@ -18,9 +18,9 @@ export default function EventCalendar({ user }) {
     getEvents();
   }, []);
 
-  const handleEventClick = (event) => {
-    navigate(`/events/${event.id}`);
-  };
+const handleEventClick = (event) => {
+  navigate(`/events/${event.id}`);
+};
 
   // const getCategoryColor = (category) => {
   //   switch (category) {
@@ -39,33 +39,30 @@ export default function EventCalendar({ user }) {
   //   }
   // };
 
-  const eventsList = events.map((event, index) => ({
-    id: event._id,
-    title: event.eventName,
-    start: new Date(event.dateTime),
-    end: new Date(event.dateTime),
-    // backgroundColor: getCategoryColor(event.category),
-  }));
+const eventsList = events.map((event, index) => ({
+  id: event._id,
+  title: event.eventName,
+  start: new Date(event.dateTime),
+  end: new Date(event.dateTime),
+  // backgroundColor: getCategoryColor(event.category),
+}));
 
   
 
-  async function handleAddEvent(newEventData) {
-    const newEvent = await eventsAPI.addEvent(newEventData);
-    setEvents([...events, newEvent]);
-  }
+async function handleAddEvent(newEventData) {
+  const newEvent = await eventsAPI.addEvent(newEventData);
+  setEvents([...events, newEvent]);
+}
 
-  // async function handleDelete(eventId) {
-  //   setEvents(events.filter(event => event._id !== eventId));
-  // }
 
-  return (
-    <div className="EventCalendar">
-      <div className="EventForm-container">
-        <EventForm user={user} handleAddEvent={handleAddEvent} />
-      </div>
-      <div className="Calendar-container">
-        <Calendar events={eventsList} handleEventClick={handleEventClick} />
-      </div>
+return (
+  <div className="EventCalendar">
+    <div className="EventForm-container">
+      <EventForm user={user} handleAddEvent={handleAddEvent} />
     </div>
+    <div className="Calendar-container">
+      <Calendar events={eventsList} handleEventClick={handleEventClick} />
+    </div>
+  </div>
   );
 }

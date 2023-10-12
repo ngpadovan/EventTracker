@@ -14,28 +14,29 @@ export default function EventDetailPage ({ user }) {
 
     
 
-    useEffect(() => {
-        async function getEventDetails() {
-          try {
-            const eventData = await eventsAPI.getEventById(id);
-            setEvent(eventData);
-          } catch (error) {
+useEffect(() => {
+    async function getEventDetails() {
+        try {
+        const eventData = await eventsAPI.getEventById(id);
+        setEvent(eventData);
+        } catch (error) {
             
-          } finally {
+        } finally {
             setLoading(false);
-          }
         }
-        getEventDetails();
-      }, [id]);
-
-      return (
-        <div>
-          <h1>Event Details</h1>
-          {loading ? (
-            <p>Loading...</p>
-          ) : (
-            <EventDetail event={event} setEvent={setEvent}/>
-          )}
-        </div>
-      );
     }
+    getEventDetails();
+}, [id]);
+      
+
+return (
+    <div>
+        <h1>Event Details</h1>
+        {loading ? (
+        <p>Loading...</p>
+        ) : (
+        <EventDetail event={event} setEvent={setEvent}/>
+        )}
+    </div>
+    );
+}
