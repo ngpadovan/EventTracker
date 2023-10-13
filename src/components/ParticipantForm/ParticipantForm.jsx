@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './ParticipantForm.css';
 
 
 export default function ParticipantForm ({user, handleAddParticipant}) {
