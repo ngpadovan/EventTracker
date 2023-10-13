@@ -4,7 +4,7 @@ import EventForm from '../../components/EventForm/EventForm';
 import * as eventsAPI from '../../utilities/events-api';
 import Calendar from '../../components/Calendar/Calendar';
 import './EventCalendar.css';
-import EventDetail from '../../components/EventDetail/EventDetail';
+
 
 export default function EventCalendar({ user }) {
   const [events, setEvents] = useState([]);
