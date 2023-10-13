@@ -30,9 +30,15 @@ export default function EventManager({ user, handleAddEvent }) {
   }
   return (
     <div className="EventManager">
-      <EventForm user={user} handleAddEvent={handleAddEvent} />
-      <h1>Event Manager</h1>
-      {!events.length ? <p>No Events Yet</p> : eventsList}
+      <h1 className="heading">Event Manager</h1>
+      <div className="content-container">
+        <div className="event-list">
+          {!events.length ? <p>No Events Yet</p> : eventsList}
+        </div>
+        <div className="event-form-manager">
+          <EventForm user={user} handleAddEvent={handleAddEvent} />
+        </div>
+      </div>
     </div>
   );
 }
