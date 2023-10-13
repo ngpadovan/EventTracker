@@ -23,10 +23,10 @@
 .EventForm textarea {
   width: 100%;
   padding: 10px;
-  margin: 5px 0; /* Add vertical margin, adjust as needed */
+  margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box; /* Include padding and border in the element's dimensions */
+  box-sizing: border-box;
 }
 
 .EventForm input[type="checkbox"] {

@@ -2,6 +2,7 @@ import { useState } from "react";
 import * as eventsAPI from "../../utilities/events-api";
 import EditEventForm from "../EditEventForm/EditEventForm";
 import { useNavigate } from 'react-router-dom';
+import './EventDetail.css'
 
 
 
@@ -38,7 +39,7 @@ async function handleUpdate(editedEvent) {
 
   
   return (
-    <div className="Event">
+    <div className="Event-Detail">
     <div>
       <p><strong>Title:</strong> {event.eventName}</p>
       <p><strong>Category:</strong> {event.category}</p>

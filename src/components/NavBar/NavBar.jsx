@@ -8,11 +8,13 @@ export default function NavBar({ user, setUser }) {
     setUser(null);
   }
 
-  return (
+return (
     <nav className="navbar">
       <Link to="/participants" className="navbar-link" activeClassName="active">Participants</Link>
       &nbsp; | &nbsp;
-       <Link to="/" className="navbar-link" activeClassName="active">Events Calendar</Link>
+      <Link to="/eventmanager" className="navbar-link" activeClassName="active">Events Manager</Link>
+      &nbsp; | &nbsp;
+      <Link to="/" className="navbar-link" activeClassName="active">Events Calendar</Link>
       &nbsp;&nbsp;
       <span>Welcome, {user.name}</span>
       &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>

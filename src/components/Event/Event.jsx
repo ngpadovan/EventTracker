@@ -1,3 +1,4 @@
+import './Event.css'
 
 export default function Event({ event, handleDelete }) {
 

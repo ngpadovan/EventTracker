@@ -2,6 +2,7 @@ import * as eventsAPI from '../../utilities/events-api';
 import { useState, useEffect } from 'react';
 import EventDetail from '../../components/EventDetail/EventDetail';
 import { useParams } from 'react-router-dom';
+import './EventDetailPage.css'
 
 
 
@@ -35,7 +36,9 @@ return (
         {loading ? (
         <p>Loading...</p>
         ) : (
+        <div className='event-detail-container'>
         <EventDetail event={event} setEvent={setEvent}/>
+        </div>
         )}
     </div>
     );

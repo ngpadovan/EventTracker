@@ -1,0 +1,16 @@
+.EventManager {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .EventForm {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .EventList {
+    flex: 2;
+    padding: 20px;
+  }
