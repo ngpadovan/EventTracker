@@ -40,4 +40,5 @@ Wireframe-
 
 ERD-
 
-<img width="800" alt="Screenshot 2023-10-16 at 7 31 54 AM" src="https://github.com/ngpadovan/EventTracker/assets/140434796/83f95553-3534-4a90-b0f7-853684e064b1">
+<img width="810" alt="Screenshot 2023-10-16 at 8 01 31 AM" src="https://github.com/ngpadovan/EventTracker/assets/140434796/06aba8e0-b886-4be6-8558-8db888e28430">
+
