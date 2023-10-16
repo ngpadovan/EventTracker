@@ -37,3 +37,7 @@ Trello-
 
 Wireframe-
 ![IMG_3294](https://github.com/ngpadovan/EventTracker/assets/140434796/1396a88c-b5ff-45f4-a48a-504576cd3574)
+
+ERD-
+
+<img width="800" alt="Screenshot 2023-10-16 at 7 31 54 AM" src="https://github.com/ngpadovan/EventTracker/assets/140434796/83f95553-3534-4a90-b0f7-853684e064b1">
